@@ -1,0 +1,37 @@
+<html> 
+<head>
+<h2  align="center" style="height:50px; line-height:50px; background:#eeeeee">Listing all books</h2>  
+</head>
+<body>
+ <table align="center" border="1px" bordercolor="#888888" style="border-collapse:collapse" cellspacing="0px" width="80%" style="border: solid thin blue">
+  <tr>
+    <th bgcolor="#E6E6FA">name</th>
+    <th bgcolor="#E6E6FA">description</th>
+	<th bgcolor="#E6E6FA">price</th>
+	<th bgcolor="#E6E6FA">publisher</th>
+	<th bgcolor="#E6E6FA">publisher date</th>
+	<th bgcolor="#E6E6FA" colspan="3">operation</th>  
+  </tr>
+  
+  <% @books.each do |book| %>  
+    <tr>
+      <td ><%= book.name %></td>
+      <td><%= book.description %></td>
+	  <td><%= book.price %></td>
+      <td><%= book.publisher %></td>
+	  <td><%= book.publisherdate %></td>
+	  <td><%= link_to 'show', { :action => "show" ,:id =>book.id } %></td>
+      <td><%= link_to 'edit', { :action => "edit" ,:id =>book.id }%></td>
+	  <td><%= link_to 'delete',{ :action => "deletebook" ,:id =>book.id } %></td>
+    </tr>	
+  <% end %>
+ </table>
+<br/>
+<p align="center">
+<a href="addbook"><button type="button">add new book</button></a> 
+</p>
+</body> 
+</html>
+
+
+

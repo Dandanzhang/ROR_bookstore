@@ -1,0 +1,35 @@
+<html> 
+<head>
+<h2  align="center" style="height:50px; line-height:50px; background:#eeeeee">The book details</h2> 
+</head>
+<body>
+<table align="center" border="1px" bordercolor="#888888" style="border-collapse:collapse" cellspacing="0px" style="border: solid thin blue">
+<tr>
+  <th width="150" style="vertical-align:center; text-align:left;">name</th>
+  <td width="400"><%= @book.name %></td>
+</tr>
+ 
+<tr>
+  <th style="vertical-align:center; text-align:left;">description</th>
+  <td><%= @book.description %></td>
+</tr>
+
+<tr>
+  <th style="vertical-align:center; text-align:left;">price</th>
+  <td><%= @book.price %></td>
+</tr>
+<tr>
+  <th style="vertical-align:center; text-align:left;">publisher</th>
+  <td><%= @book.publisher %></td>
+</tr>
+<tr>
+  <th style="vertical-align:center; text-align:left;">publisher date</th>
+  <td><%= @book.publisherdate %></td>
+</tr>
+</table>
+  
+  <p align="center">
+	 <a href="../list"><button type="button">back</button></a>
+  </p>
+</body> 
+</html>

@@ -1,0 +1,38 @@
+<html> 
+<head>
+<h2  align="center" style="height:50px; line-height:50px; background:#eeeeee">Add a new book</h2> 
+</head>
+<body>
+<%= form_for :book ,:url => { :action => "savebook" }  do |f| %>
+  <p align="center">
+    <%= f.label :name  %>
+    <%= f.text_field :name,:size => 40 %>
+  </p> 
+  
+  <p align="center">
+    <%= f.label :price %>
+    <%= f.text_field :price ,:size => 40 %>
+  </p>
+ 
+  <p align="center">
+    <%= f.label :publisher %>
+    <%= f.text_field :publisher,:size => 40  %>
+  </p>
+  
+  <p align="center">
+    <%= f.label :publisherdate %>
+    <%= f.text_field :publisherdate, :size => 40 %>
+  </p>  
+  
+  <p align="center">
+    <%= f.label :description %>
+    <%= f.text_area :description ,:rows => 2, :cols => 40 %>
+  </p>
+  <p align="center">
+    <br/>
+     <%= f.submit value="save new book" %>
+	 <a href="list"><button type="button">cancle</button></a>
+  </p>
+<% end %>
+</body> 
+</html>
